@@ -2,9 +2,9 @@
   "name": "nlvb-app",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "chmod +x node_modules/.bin/vite",
+    "postinstall": "chmod -R +x node_modules/.bin",
     "dev": "vite",
-    "build": "chmod +x node_modules/.bin/vite && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
