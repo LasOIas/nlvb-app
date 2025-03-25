@@ -8,7 +8,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
     },
-    // Add these extensions for module resolution
+    // Optional: Add extensions so you don't always need to specify them
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
   },
 });
