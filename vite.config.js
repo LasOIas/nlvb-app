@@ -8,7 +8,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
     },
-    // Optional: Add extensions so you don't always need to specify them
+    // This array helps Vite resolve modules without needing to specify extensions explicitly.
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
   },
 });

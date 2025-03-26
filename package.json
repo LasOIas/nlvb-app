@@ -1,6 +1,7 @@
 {
   "name": "nlvb-app",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "postinstall": "chmod -R +x node_modules/.bin",
     "prebuild": "chmod -R +x node_modules/.bin",
@@ -13,7 +14,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "vite": "^5.4.14",
+    "vite": "^5.4.15",
     "@vitejs/plugin-react": "^4.3.4",
     "@rollup/plugin-alias": "^5.1.1",
     "tailwindcss": "^3.3.0",
