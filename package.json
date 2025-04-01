@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "postinstall": "chmod -R +x node_modules/.bin",
-    "prebuild": "chmod -R +x node_modules/.bin",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
