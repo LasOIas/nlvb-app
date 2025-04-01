@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card.jsx";
+import { Card, CardContent } from "@/components/ui/Card.jsx";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
