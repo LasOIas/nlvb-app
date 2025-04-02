@@ -219,8 +219,8 @@ const PlayerGroupingApp = () => {
                 <option key={num} value={num}>{num}</option>
               ))}
             </select>
-            <Button onClick={() => setShowResetConfirm(true)} className="ml-4 bg-red-600 hover:bg-red-700 text-white">Reset Check-Ins</Button>
-            <Button onClick={() => setShowLogoutConfirm(true)} className="ml-4 bg-red-600 hover:bg-red-700 text-white">Logout</Button>
+            <Button onClick={() => setShowResetConfirm(true)} className="ml-4 bg-red-600 hover:bg-red-700 text-black">Reset Check-Ins</Button>
+            <Button onClick={() => setShowLogoutConfirm(true)} className="ml-4 bg-red-600 hover:bg-red-700 text-black">Logout</Button>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -231,7 +231,7 @@ const PlayerGroupingApp = () => {
                 </CardContent>
                 <div className="flex gap-2">
                   <Button onClick={() => editPlayer(index)} className="bg-blue-600 hover:bg-blue-700 text-white">Edit</Button>
-                  <Button onClick={() => confirmRemovePlayer(index)} className="bg-red-600 hover:bg-red-700 text-white">Remove</Button>
+                  <Button onClick={() => confirmRemovePlayer(index)} className="bg-red-600 hover:bg-red-700 text-black">Remove</Button>
                 </div>
               </Card>
             ))}
@@ -245,8 +245,8 @@ const PlayerGroupingApp = () => {
                 <DialogDescription>This will log you out of admin mode.</DialogDescription>
               </DialogHeader>
               <div className="flex justify-end gap-2 mt-4">
-                <Button onClick={() => setShowLogoutConfirm(false)} className="text-white">Cancel</Button>
-                <Button onClick={logoutAdmin} className="bg-red-600 hover:bg-red-700 text-white">Logout</Button>
+                <Button onClick={() => setShowLogoutConfirm(false)} className="text-black">Cancel</Button>
+                <Button onClick={logoutAdmin} className="bg-red-600 hover:bg-red-700 text-black">Logout</Button>
               </div>
             </DialogContent>
           </Dialog>
@@ -259,8 +259,8 @@ const PlayerGroupingApp = () => {
                 <DialogDescription>This will clear all checked-in players.</DialogDescription>
               </DialogHeader>
               <div className="flex justify-end gap-2 mt-4">
-                <Button onClick={() => setShowResetConfirm(false)} className="text-white">Cancel</Button>
-                <Button onClick={resetCheckIns} className="bg-red-600 hover:bg-red-700 text-white">Reset</Button>
+                <Button onClick={() => setShowResetConfirm(false)} className="text-black">Cancel</Button>
+                <Button onClick={resetCheckIns} className="bg-red-600 hover:bg-red-700 text-black">Reset</Button>
               </div>
             </DialogContent>
           </Dialog>
@@ -274,7 +274,7 @@ const PlayerGroupingApp = () => {
               </DialogHeader>
               <div className="flex justify-end gap-2 mt-4">
                 <Button onClick={() => setPlayerToRemove(null)} className="text-white">Cancel</Button>
-                <Button onClick={removeConfirmedPlayer} className="bg-red-600 hover:bg-red-700 text-white">Remove</Button>
+                <Button onClick={removeConfirmedPlayer} className="bg-red-600 hover:bg-red-700 text-black">Remove</Button>
               </div>
             </DialogContent>
           </Dialog>
