@@ -1,7 +1,8 @@
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/Card.jsx";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/Dialog";
+import { Button } from "@/components/ui/Button.jsx";
+import { Input } from "@/components/ui/Input.jsx";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/Dialog.jsx";
 
 const PlayerGroupingApp = () => {
   const [players, setPlayers] = useState(() => {
