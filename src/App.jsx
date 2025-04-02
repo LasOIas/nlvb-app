@@ -180,26 +180,26 @@ const PlayerGroupingApp = () => {
   };
 
   return (
-    <div className="p-4 min-h-screen bg-gray-900 text-white">
+    <div className="p-4 min-h-screen bg-gray-900 text-black">
       <h1 className="text-2xl font-bold mb-4">NLVB Player Grouping App</h1>
       {!isAdmin ? (
         <div>
           <h2 className="text-xl font-semibold mb-2">Check-In</h2>
           <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" className="text-black" />
-          <Button onClick={checkInPlayer} className="mt-2 bg-blue-600 hover:bg-blue-700 text-white">Check In</Button>
+          <Button onClick={checkInPlayer} className="mt-2 bg-blue-600 hover:bg-blue-700 text-black">Check In</Button>
           {checkInMessage && <p className="mt-2 text-green-400">{checkInMessage}</p>}
 
           <div className="mt-6">
             <h2 className="text-xl font-bold">New Player Registration</h2>
             <Input value={newPlayerName} onChange={(e) => setNewPlayerName(e.target.value)} placeholder="Your name" className="mt-2 text-black" />
-            <Button onClick={registerNewPlayer} className="mt-2 bg-blue-600 hover:bg-blue-700 text-white">Register</Button>
+            <Button onClick={registerNewPlayer} className="mt-2 bg-blue-600 hover:bg-blue-700 text-black">Register</Button>
             {registrationMessage && <p className="mt-2 text-blue-400">{registrationMessage}</p>}
           </div>
 
           <div className="mt-6">
             <h2 className="font-bold">Admin Login</h2>
             <Input type="password" value={adminCode} onChange={(e) => setAdminCode(e.target.value)} placeholder="Enter admin code" className="text-black" />
-            <Button onClick={loginAsAdmin} className="mt-2 bg-blue-600 hover:bg-blue-700 text-white">Login</Button>
+            <Button onClick={loginAsAdmin} className="mt-2 bg-blue-600 hover:bg-blue-700 text-black">Login</Button>
           </div>
         </div>
       ) : (
