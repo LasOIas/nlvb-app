@@ -7,6 +7,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogDescription
+  DialogHeader
 } from "@/components/ui/Dialog.jsx";
 
 const PlayerGroupingApp = () => {
