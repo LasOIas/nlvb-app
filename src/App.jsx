@@ -225,7 +225,10 @@ const PlayerGroupingApp = () => {
 
           <div className="grid grid-cols-2 gap-4">
             {players.map((player, index) => (
-              <Card key={index} className={`p-2 flex justify-between ${player.skill === 0 ? "bg-yellow-100 border border-yellow-400 text-black" : ""}`}>
+              <Card
+              key={index}
+              className={`p-2 flex justify-between bg-white text-black ${player.skill === 0 ? "border border-yellow-400" : ""}`}
+            >            
                 <CardContent>
                   {player.name} (Skill: {player.skill}) {checkedInPlayers.includes(player.name) && "✔"}
                 </CardContent>
