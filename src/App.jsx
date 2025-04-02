@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/Card.jsx";
 import { Button } from "@/components/ui/Button.jsx";
 import { Input } from "@/components/ui/Input.jsx";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/Dialog.jsx";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription
+} from "@/components/ui/Dialog.jsx";
 
 const PlayerGroupingApp = () => {
   const [players, setPlayers] = useState(() => {
@@ -231,10 +237,13 @@ const PlayerGroupingApp = () => {
             ))}
           </div>
 
+          {/* Logout Dialog */}
           <Dialog open={showLogoutConfirm} onOpenChange={setShowLogoutConfirm}>
             <DialogContent>
-              <DialogTitle>Confirm Logout</DialogTitle>
-              <p>Are you sure you want to logout?</p>
+              <DialogHeader>
+                <DialogTitle>Confirm Logout</DialogTitle>
+                <DialogDescription>This will log you out of admin mode.</DialogDescription>
+              </DialogHeader>
               <div className="flex justify-end gap-2 mt-4">
                 <Button onClick={() => setShowLogoutConfirm(false)} className="text-white">Cancel</Button>
                 <Button onClick={logoutAdmin} className="bg-red-600 hover:bg-red-700 text-white">Logout</Button>
@@ -242,10 +251,13 @@ const PlayerGroupingApp = () => {
             </DialogContent>
           </Dialog>
 
+          {/* Reset Dialog */}
           <Dialog open={showResetConfirm} onOpenChange={setShowResetConfirm}>
             <DialogContent>
-              <DialogTitle>Confirm Reset</DialogTitle>
-              <p>Are you sure you want to reset check-ins?</p>
+              <DialogHeader>
+                <DialogTitle>Reset Check-Ins</DialogTitle>
+                <DialogDescription>This will clear all checked-in players.</DialogDescription>
+              </DialogHeader>
               <div className="flex justify-end gap-2 mt-4">
                 <Button onClick={() => setShowResetConfirm(false)} className="text-white">Cancel</Button>
                 <Button onClick={resetCheckIns} className="bg-red-600 hover:bg-red-700 text-white">Reset</Button>
@@ -253,10 +265,13 @@ const PlayerGroupingApp = () => {
             </DialogContent>
           </Dialog>
 
+          {/* Remove Dialog */}
           <Dialog open={playerToRemove !== null} onOpenChange={() => setPlayerToRemove(null)}>
             <DialogContent>
-              <DialogTitle>Confirm Removal</DialogTitle>
-              <p>Are you sure you want to remove this player?</p>
+              <DialogHeader>
+                <DialogTitle>Remove Player</DialogTitle>
+                <DialogDescription>This will permanently delete this player.</DialogDescription>
+              </DialogHeader>
               <div className="flex justify-end gap-2 mt-4">
                 <Button onClick={() => setPlayerToRemove(null)} className="text-white">Cancel</Button>
                 <Button onClick={removeConfirmedPlayer} className="bg-red-600 hover:bg-red-700 text-white">Remove</Button>
