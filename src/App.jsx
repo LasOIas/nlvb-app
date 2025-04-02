@@ -6,7 +6,7 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  DialogDescription
+  DialogDescription,
   DialogHeader
 } from "@/components/ui/Dialog.jsx";
 
