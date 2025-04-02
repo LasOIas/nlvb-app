@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/Input.jsx";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
   DialogTitle,
   DialogDescription
 } from "@/components/ui/Dialog.jsx";
