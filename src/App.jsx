@@ -180,7 +180,7 @@ const PlayerGroupingApp = () => {
   };
 
   return (
-    <div className="p-4 min-h-screen bg-gray-900 text-black">
+    <div className="p-4 min-h-screen bg-gray-900 text-white">
       <h1 className="text-2xl font-bold mb-4">NLVB Player Grouping App</h1>
       {!isAdmin ? (
         <div>
