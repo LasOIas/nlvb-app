@@ -19,3 +19,7 @@ export function DialogTitle({ children }) {
 export function DialogContent({ children }) {
   return <div>{children}</div>;
 }
+
+export function DialogHeader({ children }) {
+  return <div className="mb-4">{children}</div>;
+}
