@@ -24,11 +24,6 @@ export function DialogDescription({ children }) {
   return <p className="text-gray-600 mb-2">{children}</p>;
 }
 
-// ✅ Correct export block including all components
-export {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogDescription,
-  DialogHeader,
-};
+export function DialogHeader({ children }) {
+  return <div className="mb-4">{children}</div>;
+}
