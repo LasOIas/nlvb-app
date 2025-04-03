@@ -282,24 +282,24 @@ const PlayerGroupingApp = () => {
             </DialogContent>
           </Dialog>
 
-          <h2 className="text-xl font-bold mt-4">Groups</h2>
-          <div className="grid grid-cols-2 gap-4">
-            {distributePlayers().map((group, idx) => {
-              const totalSkill = group.reduce((sum, player) => sum + player.skill, 0);
-              return (
-                <Card key={idx} className="p-2">
-                  <CardContent>
-                    <h3 className="font-bold">
-                      Group {idx + 1} ({group.length} players, Total Skill: {totalSkill})
-                    </h3>
-                    {group.map((player, index) => (
-                      <p key={index}>{player.name} (Skill: {player.skill})</p>
-                    ))}
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
+<h2 className="text-xl font-bold mt-4 text-black">Groups</h2>
+<div className="grid grid-cols-2 gap-4 bg-white text-black p-4 rounded-xl shadow mt-2">
+  {distributePlayers().map((group, idx) => {
+    const totalSkill = group.reduce((sum, player) => sum + player.skill, 0);
+    return (
+      <Card key={idx} className="p-2">
+        <CardContent>
+          <h3 className="font-bold">
+            Group {idx + 1} ({group.length} players, Total Skill: {totalSkill})
+          </h3>
+          {group.map((player, index) => (
+            <p key={index}>{player.name} (Skill: {player.skill})</p>
+          ))}
+        </CardContent>
+      </Card>
+    );
+  })}
+</div>
         </div>
       )}
     </div>
